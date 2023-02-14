@@ -1,0 +1,15 @@
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\bin\Debug\net6.0\RpgClasses.exe
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\bin\Debug\net6.0\RpgClasses.deps.json
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\bin\Debug\net6.0\RpgClasses.runtimeconfig.json
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\bin\Debug\net6.0\RpgClasses.dll
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\bin\Debug\net6.0\RpgClasses.pdb
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.csproj.AssemblyReference.cache
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.AssemblyInfoInputs.cache
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.AssemblyInfo.cs
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.csproj.CoreCompileInputs.cache
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.dll
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\refint\RpgClasses.dll
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.pdb
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\RpgClasses.genruntimeconfig.cache
+C:\Users\LJoar1\Desktop\Assignments\BackEnd_Assignment1_ClassesRPG\RpgClasses\RpgClasses\RpgClasses\obj\Debug\net6.0\ref\RpgClasses.dll
