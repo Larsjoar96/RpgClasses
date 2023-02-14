@@ -18,9 +18,9 @@
             Console.WriteLine("It is made of solid " + gauntlets.getArmorType());
             Console.WriteLine("It can be worn in the slot " + gauntlets.getSlot());
             Console.WriteLine("Bonus stats include: ");
-            Console.WriteLine("Intellect bonus: " + gauntlets.getBonusIntellect());
-            Console.WriteLine("Dexerity bonus: " + gauntlets.getBonusDexerity());
-            Console.WriteLine("Strength bonus: " + gauntlets.getBonusStrength());
+            Console.WriteLine("Intellect bonus: " + gauntlets.getArmorAttribute().intellect);
+            Console.WriteLine("Dexerity bonus: " + gauntlets.getArmorAttribute().dexerity);
+            Console.WriteLine("Strength bonus: " + gauntlets.getArmorAttribute().strength);
         }
     }
 }
