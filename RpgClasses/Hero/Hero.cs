@@ -55,5 +55,21 @@ public class Hero
         equipment.Add(Slots.Legs, null);
         
     }
+    public void displayHero() 
+    {
+        Console.WriteLine("Name: " + heroName);
+        Console.WriteLine("Class: " + this.GetType());
+        Console.WriteLine("Level: " + level);
+        Console.WriteLine("Attributes: ");
+        Console.WriteLine("Strength: " + levelAttributes.strength);
+        Console.WriteLine("Dexterity: " + levelAttributes.dexerity);
+        Console.WriteLine("Intellect: " + levelAttributes.intellect);
+        Console.WriteLine("Equipment: ");
+        Console.WriteLine("Weapon: " + equipment[Slots.Weapon]);
+        Console.WriteLine("Head: " + equipment[Slots.Head]);
+        Console.WriteLine("Body: " + equipment[Slots.Body]);
+        Console.WriteLine("Legs: " + equipment[Slots.Legs]);
+
+    }
 
 }
