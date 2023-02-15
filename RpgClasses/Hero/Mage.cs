@@ -29,11 +29,11 @@ public class Mage : Hero
 			switch (weapon.weaponType)
 			{
 				case (int)ValidWeaponTypes.Staff :
-					equipment.Add(Slots.Weapon, weapon);
+					equipment[Slots.Weapon] = weapon;
                     Console.WriteLine("Equipped: " + weapon.getItemName());
                     break;
 				case(int)ValidWeaponTypes.Wand :
-					equipment.Add(Slots.Weapon, weapon);
+					equipment[Slots.Weapon] = weapon;
 					Console.WriteLine("Equipped: " + weapon.getItemName());
 					break;
 				default:
