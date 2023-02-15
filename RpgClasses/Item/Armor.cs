@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 public class Armor : Item
 {
-	string armorType;
+	public int armorType;
 	int[] armorAttributes;
 	int[] armorLevelUp = new int[3] { 0, 0, 0 };
 	HeroAttribute armorAttribute;
@@ -19,8 +19,8 @@ public class Armor : Item
 	{
 		setItemName(name);
 		setRequiredLevel(reqLevel);
-		armorType = type.ToString();
-		setSlot(itemSlot.ToString());
+		armorType = (int)type;
+		setSlot((int)itemSlot);
         armorAttributes = new int[3] { calculateBonusIntellect(), calculateBonusDexerity(), calculateBonusStrength() };
         armorAttribute = new HeroAttribute(armorAttributes, armorLevelUp);
     }
@@ -48,12 +48,6 @@ public class Armor : Item
         int randomModifier = RandomNumberGenerator.GetInt32(modifierMax) + 1;
         return getRequiredLevel() + randomModifier;
     }
-
-    public string getArmorType() 
-	{
-		return armorType;
-	}
-
 	public HeroAttribute getArmorAttribute() 
 	{ 
 		return armorAttribute;

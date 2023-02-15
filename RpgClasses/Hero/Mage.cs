@@ -22,17 +22,17 @@ public class Mage : Hero
 		initializeEquipment();
 	}
 	//Checks if the Hero has the valid level and WeaponType to wield the weapon
-    public override void equipWeapon(Weapon weapon)
-    {
-        if(weapon.getRequiredLevel() <= getLevel()) 
+	public override void equipWeapon(Weapon weapon)
+	{
+		if (weapon.getRequiredLevel() <= getLevel())
 		{
 			switch (weapon.weaponType)
 			{
-				case (int)ValidWeaponTypes.Staff :
+				case (int)ValidWeaponTypes.Staff:
 					equipment[Slots.Weapon] = weapon;
-                    Console.WriteLine("Equipped: " + weapon.getItemName());
-                    break;
-				case(int)ValidWeaponTypes.Wand :
+					Console.WriteLine("Equipped: " + weapon.getItemName());
+					break;
+				case (int)ValidWeaponTypes.Wand:
 					equipment[Slots.Weapon] = weapon;
 					Console.WriteLine("Equipped: " + weapon.getItemName());
 					break;
@@ -42,10 +42,28 @@ public class Mage : Hero
 					break;
 			}
 		}
-		else 
+	}
+
+        public override void equipArmor(Armor armor)
+    {
+        if (armor.getRequiredLevel() <= getLevel())
+        {
+            switch (armor.armorType)
+            {
+                case (int)ValidArmorTypes.Cloth:
+                    //equipment[] = armor;
+                    Console.WriteLine("Equipped: " + armor.getItemName());
+                    break;
+                default:
+                    Console.WriteLine("Not the required weapon type");
+                    //Throw error InvalidWeaponException
+                    break;
+            }
+        }
+        else 
 		{
 			Console.WriteLine("Your hero is not the required level");
-			//Throw too low level exception
+			
 		}
     }
 }

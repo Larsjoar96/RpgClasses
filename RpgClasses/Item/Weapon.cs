@@ -21,7 +21,7 @@ public class Weapon : Item
 		setItemName(name);
 		setRequiredLevel(reqLevel);
 		weaponType =  (int)type;
-		setSlot(itemSlot.ToString());
+		setSlot((int)itemSlot);
 		weaponDamage = calculateWeaponDamage();
 	}
 

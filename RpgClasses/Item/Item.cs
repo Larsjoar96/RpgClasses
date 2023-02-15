@@ -4,7 +4,7 @@ public class Item
 {
 	string itemName;
 	int requiredLevel;
-    string slot;
+    int slot;
     public enum Slots
     {
         Weapon = 1,
@@ -18,11 +18,11 @@ public class Item
  
 	}
 
-    public void setSlot(string itemSlot) 
+    public void setSlot(int itemSlot) 
     {
         slot = itemSlot;
     }
-    public string getSlot() 
+    public int getSlot() 
     {
         return slot;
     }

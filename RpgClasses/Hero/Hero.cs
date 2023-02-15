@@ -7,6 +7,10 @@ public class Hero
     int level = 1;
     public HeroAttribute levelAttributes;
     public Dictionary <Slots,Item> equipment;
+    public int damagingAttribute;
+    public Exception TooLowLevelException;
+    public Exception WrongWeaponTypeException;
+    public Exception WrongArmorTypeException;
     public enum Slots 
     {
         Weapon = 1,
