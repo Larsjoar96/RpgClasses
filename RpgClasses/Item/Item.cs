@@ -7,10 +7,10 @@ public class Item
     string slot;
     public enum Slots
     {
-        Weapon,
-        Head,
-        Body,
-        Legs
+        Weapon = 1,
+        Head = 2,
+        Body = 3,
+        Legs = 4
     }
 
     public Item()

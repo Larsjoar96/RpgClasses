@@ -4,27 +4,28 @@ using System.Security.Cryptography;
 public class Weapon : Item
 {
 
-	int weaponDamage = 1;
-	string weaponType;
+	public int weaponDamage = 1;
+	public int weaponType;
 	public enum WeaponType 
 	{
-		Axe,
-		Bow,
-		Dagger,
-		Hammer,
-		Staff,
-		Sword,
-		Wand
+		Axe = 1,
+		Bow = 2,
+		Dagger = 3,
+		Hammer = 4,
+		Staff = 5,
+		Sword = 6,
+		Wand = 7
 	}
 	public Weapon(string name, int reqLevel, WeaponType type, Slots itemSlot)
 	{
 		setItemName(name);
 		setRequiredLevel(reqLevel);
-		weaponType = type.ToString();
+		weaponType =  (int)type;
 		setSlot(itemSlot.ToString());
 		weaponDamage = calculateWeaponDamage();
 	}
 
+	//Calculate the weapons damage based on its required level and a random modifier with an upper limit of 10
 	private int calculateWeaponDamage() 
 	{
 		int modifierMax = 9;

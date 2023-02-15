@@ -10,10 +10,10 @@ public class Armor : Item
 
 	public enum ArmorType 
 	{
-		Cloth,
-		Leather,
-		Mail,
-		Plate
+		Cloth = 1,
+		Leather = 2,
+		Mail = 3,
+		Plate = 4
 	}
 	public Armor(string name, int reqLevel, ArmorType type, Slots itemSlot)
 	{
