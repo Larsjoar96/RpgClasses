@@ -4,25 +4,18 @@ public class Item
 {
 	string itemName;
 	int requiredLevel;
-    int slot;
-    public enum Slots
-    {
-        Weapon = 1,
-        Head = 2,
-        Body = 3,
-        Legs = 4
-    }
+    Hero.Slots slot;
 
     public Item()
 	{
  
 	}
 
-    public void setSlot(int itemSlot) 
+    public void setSlot(Hero.Slots itemSlot) 
     {
         slot = itemSlot;
     }
-    public int getSlot() 
+    public Hero.Slots getSlot() 
     {
         return slot;
     }
@@ -39,6 +32,10 @@ public class Item
     public void setRequiredLevel(int reqLevel) 
     {
         requiredLevel = reqLevel;
+    }
+    public virtual HeroAttribute getAttribute() 
+    {
+        return null;
     }
     public int getRequiredLevel() 
     {

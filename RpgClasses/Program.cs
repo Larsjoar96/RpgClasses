@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             Mage character = new Mage("Steve");
-            Weapon staff = new Weapon("Fire Cane", 3, Weapon.WeaponType.Staff, Item.Slots.Weapon);
-
+            Weapon staff = new Weapon("Fire Cane", 3, Weapon.WeaponType.Staff, Hero.Slots.Weapon);
+            character.LevelUp();
+            character.LevelUp();
+            character.equipWeapon(staff);
             character.displayHero();
 
         }

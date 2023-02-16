@@ -5,7 +5,7 @@ public class Weapon : Item
 {
 
 	public int weaponDamage = 1;
-	public int weaponType;
+	public WeaponType weaponType;
 	public enum WeaponType 
 	{
 		Axe = 1,
@@ -16,12 +16,12 @@ public class Weapon : Item
 		Sword = 6,
 		Wand = 7
 	}
-	public Weapon(string name, int reqLevel, WeaponType type, Slots itemSlot)
+	public Weapon(string name, int reqLevel, WeaponType type, Hero.Slots itemSlot)
 	{
 		setItemName(name);
 		setRequiredLevel(reqLevel);
-		weaponType =  (int)type;
-		setSlot((int)itemSlot);
+		weaponType =  type;
+		setSlot(itemSlot);
 		weaponDamage = calculateWeaponDamage();
 	}
 

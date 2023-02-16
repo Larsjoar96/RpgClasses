@@ -3,8 +3,8 @@ using System.Security.Cryptography;
 
 public class Armor : Item
 {
-	public int armorType;
-	int[] armorAttributes;
+	public ArmorType armorType;
+	int[] tempArmorAttributes;
 	int[] armorLevelUp = new int[3] { 0, 0, 0 };
 	HeroAttribute armorAttribute;
 
@@ -15,14 +15,14 @@ public class Armor : Item
 		Mail = 3,
 		Plate = 4
 	}
-	public Armor(string name, int reqLevel, ArmorType type, Slots itemSlot)
+	public Armor(string name, int reqLevel, ArmorType type, Hero.Slots itemSlot)
 	{
 		setItemName(name);
 		setRequiredLevel(reqLevel);
-		armorType = (int)type;
-		setSlot((int)itemSlot);
-        armorAttributes = new int[3] { calculateBonusIntellect(), calculateBonusDexerity(), calculateBonusStrength() };
-        armorAttribute = new HeroAttribute(armorAttributes, armorLevelUp);
+		armorType = type;
+		setSlot(itemSlot);
+        tempArmorAttributes = new int[3] { calculateBonusStrength(), calculateBonusDexerity(), calculateBonusIntellect() };
+        armorAttribute = new HeroAttribute(tempArmorAttributes, armorLevelUp);
     }
 
     //Gives a random intellect bonus at a max of 5 + requiredLevel
@@ -48,7 +48,7 @@ public class Armor : Item
         int randomModifier = RandomNumberGenerator.GetInt32(modifierMax) + 1;
         return getRequiredLevel() + randomModifier;
     }
-	public HeroAttribute getArmorAttribute() 
+	public override HeroAttribute getAttribute() 
 	{ 
 		return armorAttribute;
 	}
