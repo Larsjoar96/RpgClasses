@@ -21,10 +21,6 @@ public class Mage : Hero
 		int[] levelUpAttributes  = new int[3] { 1, 1, 5 };
 		levelAttributes = new HeroAttribute(startingAttributes, levelUpAttributes);
 		setName(heroName);
-        startingWeapon = new Weapon("Wooden staff", 1, Weapon.WeaponType.Staff, Slots.Weapon);
-        startingArmorHead = new Armor("Cloth hood", 1, Armor.ArmorType.Cloth, Slots.Head);
-        startingArmorBody = new Armor("Cloth robe", 1, Armor.ArmorType.Cloth, Slots.Body);
-        startingArmorLegs = new Armor("Cloth pants", 1, Armor.ArmorType.Cloth, Slots.Legs);
         initializeEquipment();
 		
 	}
@@ -71,5 +67,15 @@ public class Mage : Hero
 		{
 			Console.WriteLine("Your hero is not the required level");
 		}
+    }
+    public override int doDamage()
+    {
+		int weaponDamage = 1;
+		damagingAttribute = getTotalAttributes().intellect;
+		if (equipment[Slots.Weapon] != null) 
+		{
+			weaponDamage = ((Weapon)(equipment[Slots.Weapon])).weaponDamage;
+		}
+        return weaponDamage + damagingAttribute;
     }
 }

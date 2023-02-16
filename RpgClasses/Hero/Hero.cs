@@ -57,10 +57,10 @@ public class Hero
     public void initializeEquipment() 
     {
         equipment = new Dictionary<Slots, Item>();
-        equipment.Add(Slots.Weapon, startingWeapon);
-        equipment.Add(Slots.Head, startingArmorHead);
-        equipment.Add(Slots.Body, startingArmorBody);
-        equipment.Add(Slots.Legs, startingArmorLegs);
+        equipment.Add(Slots.Weapon, null);
+        equipment.Add(Slots.Head, null);
+        equipment.Add(Slots.Body, null);
+        equipment.Add(Slots.Legs, null);
         
     }
     //Calculates the total attributes of a hero and their equipped armor
@@ -68,22 +68,35 @@ public class Hero
     {
         int[] startAttributes = new int[3] {0,0,0};
         HeroAttribute totalAttributes = new HeroAttribute(startAttributes, startAttributes);
-        totalAttributes.strength = totalAttributes.strength + 
-                                   levelAttributes.strength + 
-                                   equipment[Slots.Head].getAttribute().strength +
-                                   equipment[Slots.Body].getAttribute().strength +
-                                   equipment[Slots.Legs].getAttribute().strength;
-        totalAttributes.dexterity = totalAttributes.dexterity +
-                                   levelAttributes.dexterity +
-                                   equipment[Slots.Head].getAttribute().dexterity +
-                                   equipment[Slots.Body].getAttribute().dexterity +
-                                   equipment[Slots.Legs].getAttribute().dexterity;
-        totalAttributes.intellect = totalAttributes.intellect +
-                                   levelAttributes.intellect +
-                                   equipment[Slots.Head].getAttribute().intellect +
-                                   equipment[Slots.Body].getAttribute().intellect +
-                                   equipment[Slots.Legs].getAttribute().intellect;
+        //Add level attributes
+        totalAttributes.strength = levelAttributes.strength;
+        totalAttributes.dexterity = levelAttributes.dexterity;
+        totalAttributes.intellect = levelAttributes.intellect;
+        //Add stats for helmet
+        if (equipment[Slots.Head] != null) 
+        {
+            totalAttributes.strength = totalAttributes.strength + ((Armor)(equipment[Slots.Head])).getAttribute().strength;
+            totalAttributes.dexterity = totalAttributes.dexterity + ((Armor)(equipment[Slots.Head])).getAttribute().dexterity;
+            totalAttributes.intellect = totalAttributes.intellect + ((Armor)(equipment[Slots.Head])).getAttribute().intellect;
+        }
+        if (equipment[Slots.Body] != null)
+        {
+            totalAttributes.strength = totalAttributes.strength + ((Armor)(equipment[Slots.Body])).getAttribute().strength;
+            totalAttributes.dexterity = totalAttributes.dexterity + ((Armor)(equipment[Slots.Body])).getAttribute().dexterity;
+            totalAttributes.intellect = totalAttributes.intellect + ((Armor)(equipment[Slots.Body])).getAttribute().intellect;
+        }
+        if (equipment[Slots.Legs] != null)
+        {
+            totalAttributes.strength = totalAttributes.strength + ((Armor)(equipment[Slots.Legs])).getAttribute().strength;
+            totalAttributes.dexterity = totalAttributes.dexterity + ((Armor)(equipment[Slots.Legs])).getAttribute().dexterity;
+            totalAttributes.intellect = totalAttributes.intellect + ((Armor)(equipment[Slots.Legs])).getAttribute().intellect;
+        }
+
         return totalAttributes;
+    }
+    public virtual int doDamage() 
+    {
+        return 0;
     }
     public void displayHero() 
     {
@@ -95,11 +108,38 @@ public class Hero
         Console.WriteLine("Dexterity: " + getTotalAttributes().dexterity);
         Console.WriteLine("Intellect: " + getTotalAttributes().intellect);
         Console.WriteLine("Equipment: ");
-        Console.WriteLine("Weapon: " + equipment[Slots.Weapon].getItemName());
-        Console.WriteLine("Head: " + equipment[Slots.Head].getItemName());
-        Console.WriteLine("Body: " + equipment[Slots.Body].getItemName());
-        Console.WriteLine("Legs: " + equipment[Slots.Legs].getItemName());
-
+        if (equipment[Slots.Weapon] != null) 
+        { 
+            Console.WriteLine("Weapon: " + (equipment[Slots.Weapon].getItemName())); 
+        }
+        else 
+        {
+            Console.WriteLine("Weapon: Unarmed");
+        }
+        if (equipment[Slots.Head] != null)
+        {
+            Console.WriteLine("Head: " + (equipment[Slots.Head].getItemName()));
+        }
+        else
+        {
+            Console.WriteLine("Head: Empty");
+        }
+        if (equipment[Slots.Body] != null)
+        {
+            Console.WriteLine("Body: " + (equipment[Slots.Body].getItemName()));
+        }
+        else
+        {
+            Console.WriteLine("Body: Empty");
+        }
+        if (equipment[Slots.Legs] != null)
+        {
+            Console.WriteLine("Legs: " + (equipment[Slots.Legs].getItemName()));
+        }
+        else
+        {
+            Console.WriteLine("Legs: Empty");
+        }
     }
 
 }

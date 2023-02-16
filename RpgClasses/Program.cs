@@ -10,6 +10,7 @@
             character.LevelUp();
             character.equipWeapon(staff);
             character.displayHero();
+            Console.WriteLine(character.doDamage());
 
         }
     }
