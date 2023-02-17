@@ -10,7 +10,6 @@ public class Item
 	{
  
 	}
-
     public void setSlot(Hero.Slots itemSlot) 
     {
         slot = itemSlot;
@@ -19,7 +18,6 @@ public class Item
     {
         return slot;
     }
-
     public void setItemName(string newName) 
     {
         itemName = newName;
@@ -28,7 +26,6 @@ public class Item
     {
         return itemName;
     }
-
     public void setRequiredLevel(int reqLevel) 
     {
         requiredLevel = reqLevel;
