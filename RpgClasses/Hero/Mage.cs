@@ -46,8 +46,8 @@ public class Mage : Hero
 			}
 		}
 	}
-
-        public override void equipArmor(Armor armor)
+    //Checks if the Hero has the valid level and ArmorType to wear the armor
+    public override void equipArmor(Armor armor)
     {
         if (armor.getRequiredLevel() <= getLevel())
         {

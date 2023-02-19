@@ -45,6 +45,7 @@ public class Rogue : Hero
             }
         }
     }
+    //Checks if the Hero has the valid level and ArmorType to wear the armor
     public override void equipArmor(Armor armor)
     {
         if (armor.getRequiredLevel() <= getLevel())
